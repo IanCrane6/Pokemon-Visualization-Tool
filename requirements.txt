@@ -1,0 +1,7 @@
+datasets
+huggingface-hub
+kagglehub
+numpy
+pandas
+Pillow
+scikit-learn
