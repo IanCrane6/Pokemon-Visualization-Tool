@@ -1,6 +1,9 @@
+import shutil
+
 import pandas as pd
 from pathlib import Path
 from sklearn.model_selection import train_test_split
+from tqdm import tqdm
 
 DATASET_DIR = Path(__file__).parent.parent / "Dataset"
 ROSTERS_DIR = Path(__file__).parent / "Pokemon Snap Rosters"
@@ -77,3 +80,61 @@ def split_data(df: pd.DataFrame, test_val_size: float = 0.2) -> tuple[pd.DataFra
     train, temp = train_test_split(df, test_size=test_val_size, random_state=42, stratify=df["label"])
     val, test = train_test_split(temp, test_size=0.5, random_state=42, stratify=temp["label"])
     return train, test, val
+
+
+def create_yolo_format(data: pd.DataFrame,data_type:str) -> None:
+    """
+    A function to create the yolo format text files for the data. The text files will be created in the same directory as the images, with the same name but with a .txt extension.
+    THIS WILL COPY THE IMAGES
+    The txt files will contain the label, and the bounding box coordinates (which will be 0.5 0.5 1.0 1.0 since we are treating the whole image as the bounding box). The images will be copied to a new directory structure that is compatible with Ultralytics YOLO format.
+    :param data: The dataframe containing the image paths, labels, and sources
+    :param data_type: The type of data (train, test, val)
+    """
+    if data_type == "train":
+        print("Creating YOLO format text files for training data...")
+        type_of_data = "train"
+    elif data_type == "test":
+        print("Creating YOLO format text files for testing data...")
+        type_of_data = "test"
+    elif data_type == "val":
+        print("Creating YOLO format text files for validation data...")
+        type_of_data = "val"
+    else:
+        raise ValueError("data_type must be one of 'train', 'test', or 'val'")
+    
+    images_path_path = ""
+    labels_path_path = ""
+
+    # for _, row in data.iterrows():
+    # data_of_specific_type = data[data["source"] == data_type]
+    for _, row in tqdm(data.iterrows(), total=len(data), desc=f"Creating yolo data for {data_type} "):
+        img_path = Path(row["image_path"])
+        label = row["label"]
+        txt_path = img_path.with_suffix(".txt")
+
+
+
+        labels_path = f"../Dataset/My_yolo_dataset/{type_of_data}/labels/"
+
+
+        # check if the labels path exists, if not create it
+        labels_path_path = Path(labels_path)
+        if not Path(labels_path).exists():
+            labels_path_path.mkdir(parents=True, exist_ok=True)
+
+        txt_path = f"{labels_path_path}/{txt_path.name}"
+        if not Path(txt_path).exists():
+            with open(txt_path, "w") as f:
+                f.write(f"{label} 0.5 0.5 1.0 1.0\n")
+ 
+        images_path = f"../Dataset/My_yolo_dataset/{type_of_data}/images/"
+        if not Path(images_path).exists():
+            images_path_path = Path(images_path)
+            images_path_path.mkdir(parents=True, exist_ok=True)
+        else:
+            images_path_path = Path(images_path)
+
+        test_existing_path = f"{images_path_path}/{img_path.name}"
+        if not Path(test_existing_path).exists():
+            shutil.copy(img_path, test_existing_path)
+        
