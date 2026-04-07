@@ -81,14 +81,32 @@ def split_data(df: pd.DataFrame, test_val_size: float = 0.2) -> tuple[pd.DataFra
     val, test = train_test_split(temp, test_size=0.5, random_state=42, stratify=temp["label"])
     return train, test, val
 
+def convert_labels_to_numeric_representation(df: pd.DataFrame, pokemon_labels: list = None) -> dict:
+    """
+    A function to convert the string labels to numeric labels for the yolo format. The numeric labels will be based on the order of the pokemon_labels list. If pokemon_labels is None, then the numeric labels will be based on the unique labels in the dataframe, sorted alphabetically.
+    :param df: The dataframe containing the image paths, labels, and sources
+    :param pokemon_labels: The list of pokemon labels to use for the numeric labels. If None, then the unique labels in the dataframe will be used.
+    :return: A dictionary mapping the string labels to numeric labels
+    """
+    if pokemon_labels is not None:
+        lower_case_labels = [label.lower() for label in pokemon_labels]
+        label_to_numeric = {label: i for i, label in enumerate(lower_case_labels)}
+    else:
+        unique_labels = sorted(df["label"].str.lower().unique())
+        label_to_numeric = {label: i for i, label in enumerate(unique_labels)}
+    
+    #df["label"] = df["label"].str.lower().map(label_to_numeric)
+    print(f"Label to numeric mapping: {label_to_numeric}")
+    return label_to_numeric
 
-def create_yolo_format(data: pd.DataFrame,data_type:str) -> None:
+def create_yolo_format(data: pd.DataFrame,data_type:str, pokemon_labels: dict) -> None:
     """
     A function to create the yolo format text files for the data. The text files will be created in the same directory as the images, with the same name but with a .txt extension.
     THIS WILL COPY THE IMAGES
     The txt files will contain the label, and the bounding box coordinates (which will be 0.5 0.5 1.0 1.0 since we are treating the whole image as the bounding box). The images will be copied to a new directory structure that is compatible with Ultralytics YOLO format.
     :param data: The dataframe containing the image paths, labels, and sources
     :param data_type: The type of data (train, test, val)
+    :param pokemon_labels: The dictionary mapping the string labels to numeric labels.
     """
     if data_type == "train":
         print("Creating YOLO format text files for training data...")
@@ -104,10 +122,16 @@ def create_yolo_format(data: pd.DataFrame,data_type:str) -> None:
     
     images_path_path = ""
     labels_path_path = ""
+    # if pokemon_labels is not None:
+    #     lower_case_labels = [label.lower() for label in pokemon_labels]
 
     # for _, row in data.iterrows():
     # data_of_specific_type = data[data["source"] == data_type]
     for _, row in tqdm(data.iterrows(), total=len(data), desc=f"Creating yolo data for {data_type} "):
+        # if pokemon_labels is not None and row["label"].lower() not in lower_case_labels:
+        #     continue
+        if pokemon_labels is not None and row["label"].lower() not in pokemon_labels:
+            continue
         img_path = Path(row["image_path"])
         label = row["label"]
         txt_path = img_path.with_suffix(".txt")
@@ -125,7 +149,7 @@ def create_yolo_format(data: pd.DataFrame,data_type:str) -> None:
         txt_path = f"{labels_path_path}/{txt_path.name}"
         if not Path(txt_path).exists():
             with open(txt_path, "w") as f:
-                f.write(f"{label} 0.5 0.5 1.0 1.0\n")
+                f.write(f"{pokemon_labels[label.lower()]} 0.5 0.5 1.0 1.0\n")
  
         images_path = f"../Dataset/My_yolo_dataset/{type_of_data}/images/"
         if not Path(images_path).exists():
