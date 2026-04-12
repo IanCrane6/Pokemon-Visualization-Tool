@@ -1,0 +1,26 @@
+path: #/home/branchn/.Gtech/Pokemon-Visualization-Tool/Dataset/My_yolo_dataset
+
+train: train/images
+val: val/images
+test: test/images
+
+nc: 12
+names:
+  0: butterfree
+  1: chansey
+  2: doduo
+  3: eevee
+  4: kangaskhan
+  5: lapras
+  6: magikarp
+  7: meowth
+  8: pidgey
+  9: pikachu
+  10: scyther
+  11: snorlax
+
+# 0: pikachu
+# 1: magikarp
+# 2: meowth
+
+#yolo ultralytics how to structure yaml for dataset
