@@ -1,0 +1,20 @@
+path: /Users/iancrane/Desktop/CS-7643/Project/Pokemon-Visualization-Tool/Dataset/My_yolo_dataset
+
+train: train/images
+val: val/images
+test: test/images
+
+nc: 12
+names:
+  - butterfree
+  - chansey
+  - doduo
+  - eevee
+  - kangaskhan
+  - lapras
+  - magikarp
+  - meowth
+  - pidgey
+  - pikachu
+  - scyther
+  - snorlax
