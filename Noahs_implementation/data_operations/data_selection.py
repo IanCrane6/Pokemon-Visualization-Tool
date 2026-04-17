@@ -36,49 +36,24 @@ def load_pokemon_for_levels(levels) -> set[str]:
     return pokemon
 
 
-def _is_3d(fname: str) -> bool:
+def select_data(sources, levels) -> pd.DataFrame:
     """
-    Returns True if the filename belongs to a 3D-model image based on game-name rules.
-
-    Always 3D model: home, showdown, x-y, omegaruby
-    3D unless filename also contains 'icons': sun
-    3D unless filename also contains 'icons' or 'default': brilliant-diamond, sword
-    """
-    fname = fname.lower()
-
-    if any(kw in fname for kw in ("home", "showdown", "x-y", "omegaruby")):
-        return True
-
-    # Gen VII
-    if "sun" in fname:
-        return "icons" not in fname
-
-    # Gen VIII
-    if any(kw in fname for kw in ("brilliant-diamond", "sword")):
-        return "icons" not in fname and "default" not in fname
-
-    return False
-
-
-def select_data(sources, levels, exclude_3d: bool = False, return_3d: bool = False) -> pd.DataFrame | tuple[pd.DataFrame, pd.DataFrame]:
-    """
-    Generates the pokemon dataframe for future splitting.
-
-    :param sources: The sources to use for the data. Either "all" or some combination of "PokemonAPI", "Kaggle", "HuggingFace" in list format.
-    :param levels: The levels to use for the data. Either "all" or a list of levels in the range 1-7 (also in list format).
-    :param exclude_3d: If True, 3D-model images (identified by _is_3d) are removed from the returned dataset.
-    :param return_3d: If True, returns a tuple (main_df, three_d_df) where three_d_df contains only the 3D-model images.
-    :return: A DataFrame of selected images, or a tuple (main_df, three_d_df) when return_3d=True.
+    Generates the pokemon dataframe for future splitting
+    :param sources: The sources to use for the data. Either "all" or some combination of "PokemonAPI", "Kaggle", "HuggingFace" in list format
+    :param levels: The levels to use for the data. Either "all" or a list of levels in the range 1-7 (also in list format)
+    :return: The dataframe containing the image paths, labels, and sources
     """
     if sources == "all":
         sources = ALL_SOURCES
 
     pokemon_set = load_pokemon_for_levels(levels)
 
-    # Creating dataset
     rows = []
     for source in sources:
         source_path = DATASET_DIR / source
+        if not source_path.exists():
+            print(f"Warning: {source} folder not found, skipping.")
+            continue
 
         for img_path in source_path.rglob("*"):
             if not img_path.is_file():
@@ -91,25 +66,8 @@ def select_data(sources, levels, exclude_3d: bool = False, return_3d: bool = Fal
                 })
 
     df = pd.DataFrame(rows)
-
-    # 3D Filtering
-    if exclude_3d or return_3d:
-        mask_3d = df["image_path"].apply(lambda p: _is_3d(Path(p).name))
-        three_d_df = df[mask_3d].reset_index(drop=True)
-        main_df = df[~mask_3d].reset_index(drop=True)
-    else:
-        three_d_df = pd.DataFrame(columns=df.columns)
-        main_df = df
-
-    print(f"Selected {len(main_df)} images across {main_df['label'].nunique()} Pokemon.", end="")
-    if exclude_3d or return_3d:
-        print(f"  ({len(three_d_df)} 3D-model images {'excluded' if exclude_3d else 'identified'}.)")
-    else:
-        print()
-
-    if return_3d:
-        return main_df, three_d_df
-    return main_df
+    print(f"Selected {len(df)} images across {df['label'].nunique()} Pokemon.")
+    return df
 
 
 def split_data(df: pd.DataFrame, test_val_size: float = 0.2) -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
@@ -122,7 +80,6 @@ def split_data(df: pd.DataFrame, test_val_size: float = 0.2) -> tuple[pd.DataFra
     train, temp = train_test_split(df, test_size=test_val_size, random_state=42, stratify=df["label"])
     val, test = train_test_split(temp, test_size=0.5, random_state=42, stratify=temp["label"])
     return train, test, val
-
 
 def convert_labels_to_numeric_representation(df: pd.DataFrame, pokemon_labels: list = None) -> dict:
     """
@@ -138,8 +95,7 @@ def convert_labels_to_numeric_representation(df: pd.DataFrame, pokemon_labels: l
         unique_labels = sorted(df["label"].str.lower().unique())
         label_to_numeric = {label: i for i, label in enumerate(unique_labels)}
     
-    #df["label"] = df["label"].str.lower().map(label_to_numeric)
-    print(f"Label to numeric mapping: {label_to_numeric}")
+
     return label_to_numeric
 
 def create_yolo_format(data: pd.DataFrame,data_type:str, pokemon_labels: dict) -> None:
@@ -165,11 +121,7 @@ def create_yolo_format(data: pd.DataFrame,data_type:str, pokemon_labels: dict) -
     
     images_path_path = ""
     labels_path_path = ""
-    # if pokemon_labels is not None:
-    #     lower_case_labels = [label.lower() for label in pokemon_labels]
 
-    # for _, row in data.iterrows():
-    # data_of_specific_type = data[data["source"] == data_type]
     for _, row in tqdm(data.iterrows(), total=len(data), desc=f"Creating yolo data for {data_type} "):
         # if pokemon_labels is not None and row["label"].lower() not in lower_case_labels:
         #     continue
