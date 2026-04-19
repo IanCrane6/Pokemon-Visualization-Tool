@@ -1,0 +1,49 @@
+# YOLOv8n + CBAM attention (pokemon_snap custom)
+#
+# Mirrors upstream ultralytics/cfg/models/v8/yolov8.yaml (scale 'n') with a
+# single CBAMExt block inserted after the final backbone C2f (stride-32), as
+# is standard in the CBAM literature. The spatial+channel attention refines
+# the deepest feature map before it enters the neck.
+#
+# Ultralytics resolves `nc` from the data.yaml at training time; the value
+# here is a placeholder.
+#
+# Requires: pokemon_snap.models.yolo_ext.register.register_all() to be called
+# before YOLO(this_yaml) so that `CBAMExt` is resolvable by parse_model().
+
+nc: 80
+scales:
+  n: [0.33, 0.25, 1024]
+
+backbone:
+  # [from, repeats, module, args]
+  - [-1, 1, Conv, [64, 3, 2]]           # 0-P1/2
+  - [-1, 1, Conv, [128, 3, 2]]          # 1-P2/4
+  - [-1, 3, C2f, [128, True]]           # 2
+  - [-1, 1, Conv, [256, 3, 2]]          # 3-P3/8
+  - [-1, 6, C2f, [256, True]]           # 4
+  - [-1, 1, Conv, [512, 3, 2]]          # 5-P4/16
+  - [-1, 6, C2f, [512, True]]           # 6
+  - [-1, 1, Conv, [1024, 3, 2]]         # 7-P5/32
+  - [-1, 3, C2f, [1024, True]]          # 8
+  - [-1, 1, CBAM, [256]]            # 9  <-- CBAM attention on deepest feature
+  - [-1, 1, SPPF, [1024, 5]]            # 10
+
+head:
+  - [-1, 1, nn.Upsample, [None, 2, "nearest"]]
+  - [[-1, 6], 1, Concat, [1]]           # cat backbone P4
+  - [-1, 3, C2f, [512]]                 # 13
+
+  - [-1, 1, nn.Upsample, [None, 2, "nearest"]]
+  - [[-1, 4], 1, Concat, [1]]           # cat backbone P3
+  - [-1, 3, C2f, [256]]                 # 16 (P3/8-small)
+
+  - [-1, 1, Conv, [256, 3, 2]]
+  - [[-1, 13], 1, Concat, [1]]          # cat head P4
+  - [-1, 3, C2f, [512]]                 # 19 (P4/16-medium)
+
+  - [-1, 1, Conv, [512, 3, 2]]
+  - [[-1, 10], 1, Concat, [1]]          # cat head P5
+  - [-1, 3, C2f, [1024]]                # 22 (P5/32-large)
+
+  - [[16, 19, 22], 1, Detect, [nc]]     # Detect(P3, P4, P5)

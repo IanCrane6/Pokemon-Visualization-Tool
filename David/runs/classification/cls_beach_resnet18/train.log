@@ -1,0 +1,62 @@
+2026-04-12 09:34:39,682 | INFO | Preparing source download: PokemonAPI
+2026-04-12 09:34:39,683 | INFO | Downloading PokeAPI sprites for 12 Pokemon
+2026-04-12 09:34:57,104 | INFO | PokeAPI | Pidgey | saved 82 files
+2026-04-12 09:34:57,308 | INFO | PokeAPI | Snorlax | saved 83 files
+2026-04-12 09:34:57,965 | INFO | PokeAPI | Lapras | saved 83 files
+2026-04-12 09:34:58,226 | INFO | PokeAPI | Meowth | saved 83 files
+2026-04-12 09:35:03,097 | INFO | PokeAPI | Pikachu | saved 119 files
+2026-04-12 09:35:05,075 | INFO | PokeAPI | Scyther | saved 116 files
+2026-04-12 09:35:06,223 | INFO | PokeAPI | Doduo | saved 118 files
+2026-04-12 09:35:06,233 | INFO | PokeAPI | Butterfree | saved 117 files
+2026-04-12 09:35:14,873 | INFO | PokeAPI | Chansey | saved 83 files
+2026-04-12 09:35:16,304 | INFO | PokeAPI | Kangaskhan | saved 82 files
+2026-04-12 09:35:17,196 | INFO | PokeAPI | Eevee | saved 93 files
+2026-04-12 09:35:23,234 | INFO | PokeAPI | Magikarp | saved 118 files
+2026-04-12 09:35:23,236 | INFO | Preparing source download: Kaggle
+2026-04-12 09:36:04,792 | INFO | Kaggle | matched 48 directories | copied 476 images
+2026-04-12 09:36:04,792 | INFO | Preparing source download: HuggingFace
+2026-04-12 09:36:15,527 | INFO | HuggingFace | extracting test.zip
+2026-04-12 09:36:15,681 | INFO | HuggingFace | extracting train.zip
+2026-04-12 09:36:16,664 | INFO | HuggingFace | extracting valid-mini.zip
+2026-04-12 09:36:16,682 | INFO | HuggingFace | extracting valid.zip
+2026-04-12 09:36:17,224 | INFO | HuggingFace | matched 12 directories | copied 566 images
+2026-04-12 09:36:17,334 | WARNING | Skipping unreadable image: /workspace/pokemon-snap-benchmark/data/raw/PokemonAPI/Eevee/back_female.png
+2026-04-12 09:36:17,335 | WARNING | Skipping unreadable image: /workspace/pokemon-snap-benchmark/data/raw/PokemonAPI/Eevee/back_shiny_female.png
+2026-04-12 09:36:17,336 | WARNING | Skipping unreadable image: /workspace/pokemon-snap-benchmark/data/raw/PokemonAPI/Eevee/front_female.png
+2026-04-12 09:36:17,336 | WARNING | Skipping unreadable image: /workspace/pokemon-snap-benchmark/data/raw/PokemonAPI/Eevee/front_shiny_female.png
+2026-04-12 09:36:17,353 | WARNING | Skipping unreadable image: /workspace/pokemon-snap-benchmark/data/raw/PokemonAPI/Eevee/versions_generation-v_black-white_back_female.png
+2026-04-12 09:36:17,353 | WARNING | Skipping unreadable image: /workspace/pokemon-snap-benchmark/data/raw/PokemonAPI/Eevee/versions_generation-v_black-white_back_shiny_female.png
+2026-04-12 09:36:17,354 | WARNING | Skipping unreadable image: /workspace/pokemon-snap-benchmark/data/raw/PokemonAPI/Eevee/versions_generation-v_black-white_front_female.png
+2026-04-12 09:36:17,355 | WARNING | Skipping unreadable image: /workspace/pokemon-snap-benchmark/data/raw/PokemonAPI/Eevee/versions_generation-v_black-white_front_shiny_female.png
+2026-04-12 09:36:17,811 | INFO | Prepared dataset saved to /workspace/pokemon-snap-benchmark/data/processed/beach_all_v1
+2026-04-12 09:36:17,812 | INFO | Training experiment: cls_beach_resnet18
+2026-04-12 09:36:17,812 | INFO | Prepared dataset: /workspace/pokemon-snap-benchmark/data/processed/beach_all_v1
+2026-04-12 09:36:17,812 | INFO | Device resolved to: cuda
+2026-04-12 09:36:21,921 | INFO | Epoch 1/10 | train_loss=1.4833 | val_loss=0.4212 | val_acc=0.9055 | val_macro_f1=0.9029 | 3.13s
+2026-04-12 09:36:23,848 | INFO | Epoch 2/10 | train_loss=0.4832 | val_loss=0.1681 | val_acc=0.9652 | val_macro_f1=0.9655 | 1.68s
+2026-04-12 09:36:25,881 | INFO | Epoch 3/10 | train_loss=0.2748 | val_loss=0.0909 | val_acc=0.9801 | val_macro_f1=0.9806 | 1.80s
+2026-04-12 09:36:27,829 | INFO | Epoch 4/10 | train_loss=0.2059 | val_loss=0.0663 | val_acc=0.9851 | val_macro_f1=0.9862 | 1.71s
+2026-04-12 09:36:29,662 | INFO | Epoch 5/10 | train_loss=0.1834 | val_loss=0.0539 | val_acc=0.9801 | val_macro_f1=0.9811 | 1.71s
+2026-04-12 09:36:31,491 | INFO | Epoch 6/10 | train_loss=0.1640 | val_loss=0.0558 | val_acc=0.9851 | val_macro_f1=0.9847 | 1.71s
+2026-04-12 09:36:33,349 | INFO | Epoch 7/10 | train_loss=0.1611 | val_loss=0.0550 | val_acc=0.9801 | val_macro_f1=0.9812 | 1.74s
+2026-04-12 09:36:35,376 | INFO | Epoch 8/10 | train_loss=0.1436 | val_loss=0.0334 | val_acc=0.9950 | val_macro_f1=0.9949 | 1.79s
+2026-04-12 09:36:37,231 | INFO | Epoch 9/10 | train_loss=0.1351 | val_loss=0.0379 | val_acc=0.9900 | val_macro_f1=0.9901 | 1.73s
+2026-04-12 09:36:39,243 | INFO | Epoch 10/10 | train_loss=0.1171 | val_loss=0.0356 | val_acc=0.9851 | val_macro_f1=0.9851 | 1.90s
+2026-04-12 09:36:40,377 | INFO | Training completed. Best checkpoint: /workspace/pokemon-snap-benchmark/runs/classification/cls_beach_resnet18/best.pt
+2026-04-12 09:36:40,378 | INFO | Test accuracy: 0.9900 | Test macro_f1: 0.9892
+2026-04-12 09:59:19,183 | INFO | Using existing prepared dataset: /workspace/pokemon-snap-benchmark/data/processed/beach_all_v1
+2026-04-12 09:59:19,184 | INFO | Training experiment: cls_beach_resnet18
+2026-04-12 09:59:19,184 | INFO | Prepared dataset: /workspace/pokemon-snap-benchmark/data/processed/beach_all_v1
+2026-04-12 09:59:19,184 | INFO | Device resolved to: cuda
+2026-04-12 09:59:23,101 | INFO | Epoch 1/10 | train_loss=1.4384 | val_loss=0.6248 | val_acc=0.8358 | val_macro_f1=0.8210 | 3.21s
+2026-04-12 09:59:25,081 | INFO | Epoch 2/10 | train_loss=0.4425 | val_loss=0.2698 | val_acc=0.9353 | val_macro_f1=0.9340 | 1.74s
+2026-04-12 09:59:26,985 | INFO | Epoch 3/10 | train_loss=0.2580 | val_loss=0.1321 | val_acc=0.9900 | val_macro_f1=0.9889 | 1.68s
+2026-04-12 09:59:28,700 | INFO | Epoch 4/10 | train_loss=0.1907 | val_loss=0.0967 | val_acc=0.9701 | val_macro_f1=0.9700 | 1.60s
+2026-04-12 09:59:30,484 | INFO | Epoch 5/10 | train_loss=0.1757 | val_loss=0.0946 | val_acc=0.9801 | val_macro_f1=0.9788 | 1.66s
+2026-04-12 09:59:32,409 | INFO | Epoch 6/10 | train_loss=0.1737 | val_loss=0.0620 | val_acc=1.0000 | val_macro_f1=1.0000 | 1.70s
+2026-04-12 09:59:34,177 | INFO | Epoch 7/10 | train_loss=0.1539 | val_loss=0.0791 | val_acc=0.9801 | val_macro_f1=0.9803 | 1.65s
+2026-04-12 09:59:35,981 | INFO | Epoch 8/10 | train_loss=0.1449 | val_loss=0.0565 | val_acc=1.0000 | val_macro_f1=1.0000 | 1.69s
+2026-04-12 09:59:37,774 | INFO | Epoch 9/10 | train_loss=0.1457 | val_loss=0.0572 | val_acc=0.9900 | val_macro_f1=0.9905 | 1.67s
+2026-04-12 09:59:39,539 | INFO | Epoch 10/10 | train_loss=0.1089 | val_loss=0.0413 | val_acc=1.0000 | val_macro_f1=1.0000 | 1.64s
+2026-04-12 09:59:40,622 | INFO | Training completed. Best checkpoint: /workspace/pokemon-snap-benchmark/runs/classification/cls_beach_resnet18/best.pt
+2026-04-12 09:59:40,622 | INFO | Test accuracy: 0.9801 | Test macro_f1: 0.9793
