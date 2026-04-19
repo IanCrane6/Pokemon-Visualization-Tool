@@ -1,0 +1,33 @@
+experiment_name: cls_beach_resnet18
+seed: 42
+
+data:
+  dataset_name: beach_all_v1
+  levels: [beach]
+  sources: [PokemonAPI, Kaggle, HuggingFace]
+  raw_dir: data/raw
+  processed_dir: data/processed
+  auto_prepare: true
+  download: true
+  force_rebuild: false
+  train_ratio: 0.8
+  val_ratio: 0.1
+  test_ratio: 0.1
+
+model:
+  name: resnet18
+  pretrained: true
+
+train:
+  image_size: 224
+  batch_size: 64
+  num_workers: 8
+  epochs: 10
+  learning_rate: 0.0001
+  weight_decay: 0.0001
+  device: cuda
+  amp: true
+  selection_metric: accuracy
+
+output:
+  root_dir: runs/classification
