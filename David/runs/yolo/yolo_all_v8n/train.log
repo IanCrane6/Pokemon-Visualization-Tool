@@ -1,0 +1,4 @@
+2026-04-12 10:08:31,798 | INFO | Using existing prepared dataset: /workspace/pokemon-snap-benchmark/data/processed/all_levels_all_sources_v1
+2026-04-12 10:08:36,656 | INFO | YOLO export created at /workspace/pokemon-snap-benchmark/data/processed/all_levels_all_sources_v1/yolo
+2026-04-12 10:08:39,438 | INFO | Starting YOLO training: yolo_all_v8n
+2026-04-12 10:14:51,877 | INFO | YOLO training launched successfully. Outputs under /workspace/pokemon-snap-benchmark/runs/yolo/yolo_all_v8n

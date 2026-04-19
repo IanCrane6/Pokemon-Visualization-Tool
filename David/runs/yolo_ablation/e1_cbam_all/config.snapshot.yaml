@@ -1,0 +1,29 @@
+experiment_name: e1_cbam_all
+seed: 42
+data:
+  dataset_name: all_levels_all_sources_v1
+  levels:
+  - all
+  sources:
+  - PokemonAPI
+  - HuggingFace
+  raw_dir: data/raw
+  processed_dir: data/processed
+  auto_prepare: true
+  download: true
+  force_rebuild: false
+  overwrite_yolo_export: false
+  train_ratio: 0.8
+  val_ratio: 0.1
+  test_ratio: 0.1
+model:
+  name: configs/yolo_arch/yolov8n_cbam.yaml
+train:
+  image_size: 320
+  epochs: 20
+  batch_size: 32
+  workers: 8
+  device: '0'
+  loss_iou_type: ciou
+output:
+  root_dir: runs/yolo_ablation

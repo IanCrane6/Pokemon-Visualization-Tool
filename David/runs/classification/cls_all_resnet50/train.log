@@ -1,0 +1,32 @@
+2026-04-12 09:45:59,911 | INFO | Using existing prepared dataset: /workspace/pokemon-snap-benchmark/data/processed/all_levels_all_sources_v1
+2026-04-12 09:45:59,912 | INFO | Training experiment: cls_all_resnet50
+2026-04-12 09:45:59,912 | INFO | Prepared dataset: /workspace/pokemon-snap-benchmark/data/processed/all_levels_all_sources_v1
+2026-04-12 09:45:59,912 | INFO | Device resolved to: cuda
+2026-04-12 09:46:11,877 | INFO | Epoch 1/10 | train_loss=2.6801 | val_loss=0.5148 | val_acc=0.9006 | val_macro_f1=0.8999 | 10.32s
+2026-04-12 09:46:21,414 | INFO | Epoch 2/10 | train_loss=0.7441 | val_loss=0.1323 | val_acc=0.9789 | val_macro_f1=0.9782 | 9.02s
+2026-04-12 09:46:31,015 | INFO | Epoch 3/10 | train_loss=0.4408 | val_loss=0.0728 | val_acc=0.9869 | val_macro_f1=0.9869 | 9.06s
+2026-04-12 09:46:40,373 | INFO | Epoch 4/10 | train_loss=0.3533 | val_loss=0.0560 | val_acc=0.9890 | val_macro_f1=0.9887 | 8.84s
+2026-04-12 09:46:49,667 | INFO | Epoch 5/10 | train_loss=0.3084 | val_loss=0.0453 | val_acc=0.9930 | val_macro_f1=0.9928 | 8.78s
+2026-04-12 09:46:58,729 | INFO | Epoch 6/10 | train_loss=0.2835 | val_loss=0.0632 | val_acc=0.9809 | val_macro_f1=0.9805 | 8.79s
+2026-04-12 09:47:08,210 | INFO | Epoch 7/10 | train_loss=0.2656 | val_loss=0.0398 | val_acc=0.9880 | val_macro_f1=0.9878 | 9.20s
+2026-04-12 09:47:17,428 | INFO | Epoch 8/10 | train_loss=0.2340 | val_loss=0.0321 | val_acc=0.9900 | val_macro_f1=0.9899 | 8.95s
+2026-04-12 09:47:26,770 | INFO | Epoch 9/10 | train_loss=0.2314 | val_loss=0.0385 | val_acc=0.9900 | val_macro_f1=0.9901 | 9.08s
+2026-04-12 09:47:36,480 | INFO | Epoch 10/10 | train_loss=0.2286 | val_loss=0.0392 | val_acc=0.9910 | val_macro_f1=0.9910 | 9.45s
+2026-04-12 09:47:39,548 | INFO | Training completed. Best checkpoint: /workspace/pokemon-snap-benchmark/runs/classification/cls_all_resnet50/best.pt
+2026-04-12 09:47:39,548 | INFO | Test accuracy: 0.9900 | Test macro_f1: 0.9900
+2026-04-12 10:01:59,546 | INFO | Using existing prepared dataset: /workspace/pokemon-snap-benchmark/data/processed/all_levels_all_sources_v1
+2026-04-12 10:01:59,546 | INFO | Training experiment: cls_all_resnet50
+2026-04-12 10:01:59,547 | INFO | Prepared dataset: /workspace/pokemon-snap-benchmark/data/processed/all_levels_all_sources_v1
+2026-04-12 10:01:59,547 | INFO | Device resolved to: cuda
+2026-04-12 10:02:11,326 | INFO | Epoch 1/10 | train_loss=2.6095 | val_loss=0.8582 | val_acc=0.7892 | val_macro_f1=0.7656 | 10.46s
+2026-04-12 10:02:20,877 | INFO | Epoch 2/10 | train_loss=0.7126 | val_loss=0.2694 | val_acc=0.9398 | val_macro_f1=0.9389 | 9.01s
+2026-04-12 10:02:30,239 | INFO | Epoch 3/10 | train_loss=0.4383 | val_loss=0.1332 | val_acc=0.9749 | val_macro_f1=0.9737 | 8.82s
+2026-04-12 10:02:39,664 | INFO | Epoch 4/10 | train_loss=0.3342 | val_loss=0.1195 | val_acc=0.9709 | val_macro_f1=0.9688 | 9.15s
+2026-04-12 10:02:49,146 | INFO | Epoch 5/10 | train_loss=0.3085 | val_loss=0.0852 | val_acc=0.9759 | val_macro_f1=0.9746 | 8.96s
+2026-04-12 10:02:58,667 | INFO | Epoch 6/10 | train_loss=0.2747 | val_loss=0.0780 | val_acc=0.9829 | val_macro_f1=0.9826 | 8.97s
+2026-04-12 10:03:07,843 | INFO | Epoch 7/10 | train_loss=0.2498 | val_loss=0.0731 | val_acc=0.9779 | val_macro_f1=0.9782 | 8.91s
+2026-04-12 10:03:17,271 | INFO | Epoch 8/10 | train_loss=0.2515 | val_loss=0.0663 | val_acc=0.9839 | val_macro_f1=0.9829 | 8.89s
+2026-04-12 10:03:27,068 | INFO | Epoch 9/10 | train_loss=0.2310 | val_loss=0.0567 | val_acc=0.9839 | val_macro_f1=0.9827 | 9.51s
+2026-04-12 10:03:36,618 | INFO | Epoch 10/10 | train_loss=0.2209 | val_loss=0.0485 | val_acc=0.9920 | val_macro_f1=0.9908 | 8.99s
+2026-04-12 10:03:39,690 | INFO | Training completed. Best checkpoint: /workspace/pokemon-snap-benchmark/runs/classification/cls_all_resnet50/best.pt
+2026-04-12 10:03:39,690 | INFO | Test accuracy: 0.9759 | Test macro_f1: 0.9763

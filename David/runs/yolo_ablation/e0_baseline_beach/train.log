@@ -1,0 +1,43 @@
+2026-04-19 13:32:40,536 | INFO | Preparing source download: PokemonAPI
+2026-04-19 13:32:40,536 | INFO | Downloading PokeAPI sprites for 12 Pokemon
+2026-04-19 13:32:40,665 | INFO | PokeAPI | Pidgey | saved 0 files
+2026-04-19 13:32:40,680 | INFO | PokeAPI | Lapras | saved 0 files
+2026-04-19 13:32:40,685 | INFO | PokeAPI | Snorlax | saved 0 files
+2026-04-19 13:32:40,689 | INFO | PokeAPI | Meowth | saved 0 files
+2026-04-19 13:32:40,692 | INFO | PokeAPI | Pikachu | saved 0 files
+2026-04-19 13:32:40,694 | INFO | PokeAPI | Butterfree | saved 0 files
+2026-04-19 13:32:40,696 | INFO | PokeAPI | Doduo | saved 0 files
+2026-04-19 13:32:40,698 | INFO | PokeAPI | Scyther | saved 0 files
+2026-04-19 13:32:40,732 | INFO | PokeAPI | Eevee | saved 0 files
+2026-04-19 13:32:40,768 | INFO | PokeAPI | Chansey | saved 0 files
+2026-04-19 13:32:40,774 | INFO | PokeAPI | Kangaskhan | saved 0 files
+2026-04-19 13:32:40,776 | INFO | PokeAPI | Magikarp | saved 0 files
+2026-04-19 13:32:40,777 | INFO | Preparing source download: Kaggle
+2026-04-19 14:11:23,933 | INFO | Preparing source download: PokemonAPI
+2026-04-19 14:11:23,933 | INFO | Downloading PokeAPI sprites for 12 Pokemon
+2026-04-19 14:11:24,111 | INFO | PokeAPI | Lapras | saved 0 files
+2026-04-19 14:11:24,126 | INFO | PokeAPI | Meowth | saved 0 files
+2026-04-19 14:11:24,130 | INFO | PokeAPI | Snorlax | saved 0 files
+2026-04-19 14:11:24,140 | INFO | PokeAPI | Pikachu | saved 0 files
+2026-04-19 14:11:24,142 | INFO | PokeAPI | Butterfree | saved 0 files
+2026-04-19 14:11:24,144 | INFO | PokeAPI | Pidgey | saved 0 files
+2026-04-19 14:11:24,146 | INFO | PokeAPI | Doduo | saved 0 files
+2026-04-19 14:11:24,147 | INFO | PokeAPI | Scyther | saved 0 files
+2026-04-19 14:11:24,175 | INFO | PokeAPI | Eevee | saved 0 files
+2026-04-19 14:11:24,205 | INFO | PokeAPI | Chansey | saved 0 files
+2026-04-19 14:11:24,209 | INFO | PokeAPI | Magikarp | saved 0 files
+2026-04-19 14:11:24,212 | INFO | PokeAPI | Kangaskhan | saved 0 files
+2026-04-19 14:11:24,213 | INFO | Preparing source download: HuggingFace
+2026-04-19 14:11:24,542 | INFO | HuggingFace | matched 12 directories | copied 0 images
+2026-04-19 14:11:24,682 | WARNING | Skipping unreadable image: /workspace/psab/data/raw/PokemonAPI/Eevee/back_female.png
+2026-04-19 14:11:24,683 | WARNING | Skipping unreadable image: /workspace/psab/data/raw/PokemonAPI/Eevee/back_shiny_female.png
+2026-04-19 14:11:24,683 | WARNING | Skipping unreadable image: /workspace/psab/data/raw/PokemonAPI/Eevee/front_female.png
+2026-04-19 14:11:24,684 | WARNING | Skipping unreadable image: /workspace/psab/data/raw/PokemonAPI/Eevee/front_shiny_female.png
+2026-04-19 14:11:24,709 | WARNING | Skipping unreadable image: /workspace/psab/data/raw/PokemonAPI/Eevee/versions_generation-v_black-white_back_female.png
+2026-04-19 14:11:24,710 | WARNING | Skipping unreadable image: /workspace/psab/data/raw/PokemonAPI/Eevee/versions_generation-v_black-white_back_shiny_female.png
+2026-04-19 14:11:24,710 | WARNING | Skipping unreadable image: /workspace/psab/data/raw/PokemonAPI/Eevee/versions_generation-v_black-white_front_female.png
+2026-04-19 14:11:24,711 | WARNING | Skipping unreadable image: /workspace/psab/data/raw/PokemonAPI/Eevee/versions_generation-v_black-white_front_shiny_female.png
+2026-04-19 14:11:25,122 | INFO | Prepared dataset saved to /workspace/psab/data/processed/beach_all_v1
+2026-04-19 14:11:25,862 | INFO | YOLO export created at /workspace/psab/data/processed/beach_all_v1/yolo
+2026-04-19 14:11:27,980 | INFO | Starting YOLO training: e0_baseline_beach (model=yolov8n.pt)
+2026-04-19 14:12:45,862 | INFO | YOLO training launched successfully. Outputs under /workspace/psab/runs/yolo_ablation/e0_baseline_beach

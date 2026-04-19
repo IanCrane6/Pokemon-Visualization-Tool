@@ -1,0 +1,4 @@
+2026-04-12 10:06:40,203 | INFO | Using existing prepared dataset: /workspace/pokemon-snap-benchmark/data/processed/beach_all_v1
+2026-04-12 10:06:41,198 | INFO | YOLO export created at /workspace/pokemon-snap-benchmark/data/processed/beach_all_v1/yolo
+2026-04-12 10:06:44,061 | INFO | Starting YOLO training: yolo_beach_v8n
+2026-04-12 10:08:14,562 | INFO | YOLO training launched successfully. Outputs under /workspace/pokemon-snap-benchmark/runs/yolo/yolo_beach_v8n
