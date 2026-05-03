@@ -1,0 +1,1144 @@
+{
+  "roboflow_dir": "/root/roboflow_data",
+  "class_names": [
+    "butterfree",
+    "chansey",
+    "doduo",
+    "eevee",
+    "kangaskhan",
+    "lapras",
+    "magikarp",
+    "meowth",
+    "pidgey",
+    "pikachu",
+    "scyther",
+    "snorlax"
+  ],
+  "config": {
+    "conf": 0.25,
+    "iou_match": 0.5,
+    "padding": 0.1
+  },
+  "cnn_only": {
+    "resnet50": {
+      "accuracy": 0.175,
+      "macro_precision": 0.30210772833723654,
+      "macro_recall": 0.19635590858416943,
+      "macro_f1": 0.1771348827618711,
+      "per_class": {
+        "butterfree": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 49
+        },
+        "chansey": {
+          "precision": 1.0,
+          "recall": 0.4,
+          "f1": 0.5714285714285714,
+          "support": 5
+        },
+        "doduo": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 10
+        },
+        "eevee": {
+          "precision": 0.08196721311475409,
+          "recall": 0.625,
+          "f1": 0.14492753623188406,
+          "support": 8
+        },
+        "kangaskhan": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 6
+        },
+        "lapras": {
+          "precision": 0.5,
+          "recall": 0.2,
+          "f1": 0.2857142857142857,
+          "support": 5
+        },
+        "magikarp": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 4
+        },
+        "meowth": {
+          "precision": 0.42857142857142855,
+          "recall": 0.45,
+          "f1": 0.43902439024390244,
+          "support": 20
+        },
+        "pidgey": {
+          "precision": 0.11475409836065574,
+          "recall": 0.30434782608695654,
+          "f1": 0.16666666666666666,
+          "support": 23
+        },
+        "pikachu": {
+          "precision": 0.5,
+          "recall": 0.3,
+          "f1": 0.375,
+          "support": 10
+        },
+        "scyther": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 7
+        },
+        "snorlax": {
+          "precision": 1.0,
+          "recall": 0.07692307692307693,
+          "f1": 0.14285714285714285,
+          "support": 13
+        }
+      },
+      "n": 160,
+      "model": "resnet50"
+    },
+    "dinov3": {
+      "accuracy": 0.3,
+      "macro_precision": 0.4845659901387456,
+      "macro_recall": 0.371067058372959,
+      "macro_f1": 0.33829276223837823,
+      "per_class": {
+        "butterfree": {
+          "precision": 0.5,
+          "recall": 0.04081632653061224,
+          "f1": 0.07547169811320754,
+          "support": 49
+        },
+        "chansey": {
+          "precision": 0.625,
+          "recall": 1.0,
+          "f1": 0.7692307692307693,
+          "support": 5
+        },
+        "doduo": {
+          "precision": 0.8,
+          "recall": 0.4,
+          "f1": 0.5333333333333333,
+          "support": 10
+        },
+        "eevee": {
+          "precision": 0.029411764705882353,
+          "recall": 0.125,
+          "f1": 0.047619047619047616,
+          "support": 8
+        },
+        "kangaskhan": {
+          "precision": 1.0,
+          "recall": 0.3333333333333333,
+          "f1": 0.5,
+          "support": 6
+        },
+        "lapras": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 5
+        },
+        "magikarp": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 4
+        },
+        "meowth": {
+          "precision": 0.375,
+          "recall": 0.6,
+          "f1": 0.46153846153846156,
+          "support": 20
+        },
+        "pidgey": {
+          "precision": 0.2631578947368421,
+          "recall": 0.21739130434782608,
+          "f1": 0.23809523809523808,
+          "support": 23
+        },
+        "pikachu": {
+          "precision": 0.2222222222222222,
+          "recall": 1.0,
+          "f1": 0.36363636363636365,
+          "support": 10
+        },
+        "scyther": {
+          "precision": 1.0,
+          "recall": 0.42857142857142855,
+          "f1": 0.6,
+          "support": 7
+        },
+        "snorlax": {
+          "precision": 1.0,
+          "recall": 0.3076923076923077,
+          "f1": 0.47058823529411764,
+          "support": 13
+        }
+      },
+      "n": 160,
+      "model": "vit_base_patch16_dinov3.lvd1689m"
+    },
+    "aimv2": {
+      "accuracy": 0.2625,
+      "macro_precision": 0.36249733589087807,
+      "macro_recall": 0.36969352679756406,
+      "macro_f1": 0.25271107351567124,
+      "per_class": {
+        "butterfree": {
+          "precision": 1.0,
+          "recall": 0.02040816326530612,
+          "f1": 0.04,
+          "support": 49
+        },
+        "chansey": {
+          "precision": 0.125,
+          "recall": 0.6,
+          "f1": 0.20689655172413793,
+          "support": 5
+        },
+        "doduo": {
+          "precision": 0.6,
+          "recall": 0.9,
+          "f1": 0.72,
+          "support": 10
+        },
+        "eevee": {
+          "precision": 0.15217391304347827,
+          "recall": 0.875,
+          "f1": 0.25925925925925924,
+          "support": 8
+        },
+        "kangaskhan": {
+          "precision": 0.8,
+          "recall": 0.6666666666666666,
+          "f1": 0.7272727272727273,
+          "support": 6
+        },
+        "lapras": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 5
+        },
+        "magikarp": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 4
+        },
+        "meowth": {
+          "precision": 0.75,
+          "recall": 0.3,
+          "f1": 0.42857142857142855,
+          "support": 20
+        },
+        "pidgey": {
+          "precision": 0.5,
+          "recall": 0.043478260869565216,
+          "f1": 0.08,
+          "support": 23
+        },
+        "pikachu": {
+          "precision": 0.23529411764705882,
+          "recall": 0.8,
+          "f1": 0.36363636363636365,
+          "support": 10
+        },
+        "scyther": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 7
+        },
+        "snorlax": {
+          "precision": 0.1875,
+          "recall": 0.23076923076923078,
+          "f1": 0.20689655172413793,
+          "support": 13
+        }
+      },
+      "n": 160,
+      "model": "aimv2_large_patch14_224.apple_pt"
+    },
+    "siglip2": {
+      "accuracy": 0.21875,
+      "macro_precision": 0.18417874396135267,
+      "macro_recall": 0.258961561213114,
+      "macro_f1": 0.1849579875304513,
+      "per_class": {
+        "butterfree": {
+          "precision": 0.4,
+          "recall": 0.04081632653061224,
+          "f1": 0.07407407407407407,
+          "support": 49
+        },
+        "chansey": {
+          "precision": 0.6,
+          "recall": 0.6,
+          "f1": 0.6,
+          "support": 5
+        },
+        "doduo": {
+          "precision": 0.06666666666666667,
+          "recall": 0.1,
+          "f1": 0.08,
+          "support": 10
+        },
+        "eevee": {
+          "precision": 0.15,
+          "recall": 0.75,
+          "f1": 0.25,
+          "support": 8
+        },
+        "kangaskhan": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 6
+        },
+        "lapras": {
+          "precision": 0.2,
+          "recall": 0.2,
+          "f1": 0.2,
+          "support": 5
+        },
+        "magikarp": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 4
+        },
+        "meowth": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 20
+        },
+        "pidgey": {
+          "precision": 0.2391304347826087,
+          "recall": 0.4782608695652174,
+          "f1": 0.3188405797101449,
+          "support": 23
+        },
+        "pikachu": {
+          "precision": 0.25,
+          "recall": 0.4,
+          "f1": 0.3076923076923077,
+          "support": 10
+        },
+        "scyther": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 7
+        },
+        "snorlax": {
+          "precision": 0.30434782608695654,
+          "recall": 0.5384615384615384,
+          "f1": 0.3888888888888889,
+          "support": 13
+        }
+      },
+      "n": 160,
+      "model": "vit_base_patch16_siglip_256.v2_webli"
+    }
+  },
+  "yolo_only": {
+    "yolov8n_v2": {
+      "map50": 0.04083335130604976,
+      "map50_95": 0.008838943895682167,
+      "mp": 0.5280127810596672,
+      "mr": 0.043910256410256414,
+      "per_class": {
+        "butterfree": {
+          "ap50": 0.08688782232260493,
+          "ap50_95": 0.02537996737561955
+        },
+        "chansey": {
+          "ap50": 0.101421568627451,
+          "ap50_95": 0.0198921568627451
+        },
+        "doduo": {
+          "ap50": 0.195,
+          "ap50_95": 0.0485
+        },
+        "eevee": {
+          "ap50": 0.002232142857142857,
+          "ap50_95": 0.0002232142857142857
+        },
+        "kangaskhan": {
+          "ap50": 0.0,
+          "ap50_95": 0.0
+        },
+        "lapras": {
+          "ap50": 0.0,
+          "ap50_95": 0.0
+        },
+        "magikarp": {
+          "ap50": 0.0,
+          "ap50_95": 0.0
+        },
+        "meowth": {
+          "ap50": 0.06244402985074627,
+          "ap50_95": 0.0069734141791044785
+        },
+        "pidgey": {
+          "ap50": 0.006538461538461539,
+          "ap50_95": 0.0006997645211930927
+        },
+        "pikachu": {
+          "ap50": 0.0033928571428571428,
+          "ap50_95": 0.0005654761904761905
+        },
+        "scyther": {
+          "ap50": 0.0,
+          "ap50_95": 0.0
+        },
+        "snorlax": {
+          "ap50": 0.03208333333333333,
+          "ap50_95": 0.003833333333333333
+        }
+      }
+    },
+    "yolo11n_v2": {
+      "map50": 0.08193585978021105,
+      "map50_95": 0.020514492160757312,
+      "mp": 0.689754748736073,
+      "mr": 0.07495327323589666,
+      "per_class": {
+        "butterfree": {
+          "ap50": 0.12510256410256412,
+          "ap50_95": 0.034263675213675224
+        },
+        "chansey": {
+          "ap50": 0.38071428571428567,
+          "ap50_95": 0.11448140900195694
+        },
+        "doduo": {
+          "ap50": 0.05506634232640425,
+          "ap50_95": 0.010878939997051452
+        },
+        "eevee": {
+          "ap50": 0.0,
+          "ap50_95": 0.0
+        },
+        "kangaskhan": {
+          "ap50": 0.0,
+          "ap50_95": 0.0
+        },
+        "lapras": {
+          "ap50": 0.0,
+          "ap50_95": 0.0
+        },
+        "magikarp": {
+          "ap50": 0.0,
+          "ap50_95": 0.0
+        },
+        "meowth": {
+          "ap50": 0.17290664798793492,
+          "ap50_95": 0.029563403081066343
+        },
+        "pidgey": {
+          "ap50": 0.0009574468085106382,
+          "ap50_95": 0.00019148936170212765
+        },
+        "pikachu": {
+          "ap50": 0.0538278580090398,
+          "ap50_95": 0.0054501616874288025
+        },
+        "scyther": {
+          "ap50": 0.0,
+          "ap50_95": 0.0
+        },
+        "snorlax": {
+          "ap50": 0.1946551724137931,
+          "ap50_95": 0.0513448275862069
+        }
+      }
+    }
+  },
+  "pipeline": {
+    "yolov8n_v2__aimv2": {
+      "n_pred": 22,
+      "n_tp": 11,
+      "n_fp": 11,
+      "n_fn": 149,
+      "yolo_classification_on_tp": {
+        "accuracy": 0.36363636363636365,
+        "macro_precision": 0.15277777777777776,
+        "macro_recall": 0.20833333333333334,
+        "macro_f1": 0.1722222222222222,
+        "per_class": {
+          "butterfree": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 5
+          },
+          "chansey": {
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.6666666666666666,
+            "support": 1
+          },
+          "doduo": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 2
+          },
+          "eevee": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "kangaskhan": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "lapras": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "magikarp": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "meowth": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "pidgey": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 1
+          },
+          "pikachu": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "scyther": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "snorlax": {
+            "precision": 0.3333333333333333,
+            "recall": 0.5,
+            "f1": 0.4,
+            "support": 2
+          }
+        },
+        "n": 11
+      },
+      "cnn_classification_on_tp": {
+        "accuracy": 0.45454545454545453,
+        "macro_precision": 0.25,
+        "macro_recall": 0.25,
+        "macro_f1": 0.25,
+        "per_class": {
+          "butterfree": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 5
+          },
+          "chansey": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 1
+          },
+          "doduo": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 2
+          },
+          "eevee": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "kangaskhan": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "lapras": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "magikarp": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "meowth": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "pidgey": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 1
+          },
+          "pikachu": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "scyther": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "snorlax": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 2
+          }
+        },
+        "n": 11
+      },
+      "agreement_yolo_vs_cnn_on_tp": 0.5454545454545454
+    },
+    "yolov8n_v2__dinov3": {
+      "n_pred": 22,
+      "n_tp": 11,
+      "n_fp": 11,
+      "n_fn": 149,
+      "yolo_classification_on_tp": {
+        "accuracy": 0.36363636363636365,
+        "macro_precision": 0.15277777777777776,
+        "macro_recall": 0.20833333333333334,
+        "macro_f1": 0.1722222222222222,
+        "per_class": {
+          "butterfree": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 5
+          },
+          "chansey": {
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.6666666666666666,
+            "support": 1
+          },
+          "doduo": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 2
+          },
+          "eevee": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "kangaskhan": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "lapras": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "magikarp": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "meowth": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "pidgey": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 1
+          },
+          "pikachu": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "scyther": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "snorlax": {
+            "precision": 0.3333333333333333,
+            "recall": 0.5,
+            "f1": 0.4,
+            "support": 2
+          }
+        },
+        "n": 11
+      },
+      "cnn_classification_on_tp": {
+        "accuracy": 0.6363636363636364,
+        "macro_precision": 0.4166666666666667,
+        "macro_recall": 0.35000000000000003,
+        "macro_f1": 0.3611111111111111,
+        "per_class": {
+          "butterfree": {
+            "precision": 1.0,
+            "recall": 0.2,
+            "f1": 0.3333333333333333,
+            "support": 5
+          },
+          "chansey": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 1
+          },
+          "doduo": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 2
+          },
+          "eevee": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "kangaskhan": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "lapras": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "magikarp": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "meowth": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "pidgey": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 1
+          },
+          "pikachu": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "scyther": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "snorlax": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 2
+          }
+        },
+        "n": 11
+      },
+      "agreement_yolo_vs_cnn_on_tp": 0.45454545454545453
+    },
+    "yolo11n_v2__aimv2": {
+      "n_pred": 42,
+      "n_tp": 19,
+      "n_fp": 23,
+      "n_fn": 141,
+      "yolo_classification_on_tp": {
+        "accuracy": 0.5263157894736842,
+        "macro_precision": 0.4166666666666667,
+        "macro_recall": 0.3680555555555556,
+        "macro_f1": 0.3349206349206349,
+        "per_class": {
+          "butterfree": {
+            "precision": 1.0,
+            "recall": 0.16666666666666666,
+            "f1": 0.2857142857142857,
+            "support": 6
+          },
+          "chansey": {
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.6666666666666666,
+            "support": 3
+          },
+          "doduo": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 2
+          },
+          "eevee": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "kangaskhan": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "lapras": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "magikarp": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 1
+          },
+          "meowth": {
+            "precision": 1.0,
+            "recall": 0.25,
+            "f1": 0.4,
+            "support": 4
+          },
+          "pidgey": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "pikachu": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 1
+          },
+          "scyther": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "snorlax": {
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.6666666666666666,
+            "support": 2
+          }
+        },
+        "n": 19
+      },
+      "cnn_classification_on_tp": {
+        "accuracy": 0.47368421052631576,
+        "macro_precision": 0.29305555555555557,
+        "macro_recall": 0.3541666666666667,
+        "macro_f1": 0.2791666666666666,
+        "per_class": {
+          "butterfree": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 6
+          },
+          "chansey": {
+            "precision": 0.6,
+            "recall": 1.0,
+            "f1": 0.75,
+            "support": 3
+          },
+          "doduo": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 2
+          },
+          "eevee": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "kangaskhan": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "lapras": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "magikarp": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 1
+          },
+          "meowth": {
+            "precision": 1.0,
+            "recall": 0.25,
+            "f1": 0.4,
+            "support": 4
+          },
+          "pidgey": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "pikachu": {
+            "precision": 0.25,
+            "recall": 1.0,
+            "f1": 0.4,
+            "support": 1
+          },
+          "scyther": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "snorlax": {
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "f1": 0.8,
+            "support": 2
+          }
+        },
+        "n": 19
+      },
+      "agreement_yolo_vs_cnn_on_tp": 0.5263157894736842
+    },
+    "yolo11n_v2__dinov3": {
+      "n_pred": 42,
+      "n_tp": 19,
+      "n_fp": 23,
+      "n_fn": 141,
+      "yolo_classification_on_tp": {
+        "accuracy": 0.5263157894736842,
+        "macro_precision": 0.4166666666666667,
+        "macro_recall": 0.3680555555555556,
+        "macro_f1": 0.3349206349206349,
+        "per_class": {
+          "butterfree": {
+            "precision": 1.0,
+            "recall": 0.16666666666666666,
+            "f1": 0.2857142857142857,
+            "support": 6
+          },
+          "chansey": {
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.6666666666666666,
+            "support": 3
+          },
+          "doduo": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 2
+          },
+          "eevee": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "kangaskhan": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "lapras": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "magikarp": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 1
+          },
+          "meowth": {
+            "precision": 1.0,
+            "recall": 0.25,
+            "f1": 0.4,
+            "support": 4
+          },
+          "pidgey": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "pikachu": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 1
+          },
+          "scyther": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "snorlax": {
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.6666666666666666,
+            "support": 2
+          }
+        },
+        "n": 19
+      },
+      "cnn_classification_on_tp": {
+        "accuracy": 0.631578947368421,
+        "macro_precision": 0.4305555555555556,
+        "macro_recall": 0.40277777777777773,
+        "macro_f1": 0.37103174603174605,
+        "per_class": {
+          "butterfree": {
+            "precision": 1.0,
+            "recall": 0.3333333333333333,
+            "f1": 0.5,
+            "support": 6
+          },
+          "chansey": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 3
+          },
+          "doduo": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 2
+          },
+          "eevee": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "kangaskhan": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "lapras": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "magikarp": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 1
+          },
+          "meowth": {
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1": 0.6666666666666666,
+            "support": 4
+          },
+          "pidgey": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "pikachu": {
+            "precision": 0.16666666666666666,
+            "recall": 1.0,
+            "f1": 0.2857142857142857,
+            "support": 1
+          },
+          "scyther": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "snorlax": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 2
+          }
+        },
+        "n": 19
+      },
+      "agreement_yolo_vs_cnn_on_tp": 0.5789473684210527
+    }
+  }
+}

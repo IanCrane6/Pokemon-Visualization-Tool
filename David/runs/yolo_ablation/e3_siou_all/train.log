@@ -1,6 +1,0 @@
-2026-04-19 14:54:52,009 | INFO | Using existing prepared dataset: /workspace/psab/data/processed/all_levels_all_sources_v1
-2026-04-19 14:54:52,009 | INFO | Using existing YOLO export: /workspace/psab/data/processed/all_levels_all_sources_v1/yolo
-2026-04-19 14:54:53,856 | INFO | Starting YOLO training: e3_siou_all  weights=yolov8n.pt
-2026-04-19 14:54:53,891 | INFO | Registering on_train_start callback for V8SIoULoss
-2026-04-19 14:55:00,329 | INFO | V8SIoULoss criterion installed on trainer.model
-2026-04-19 15:00:35,928 | INFO | YOLO training launched successfully. Outputs under /workspace/psab/runs/yolo_ablation/e3_siou_all

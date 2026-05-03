@@ -1,7 +1,0 @@
-{
-  "data_yaml": "/workspace/psab/data/processed/all_levels_all_sources_v1/yolo/data.yaml",
-  "experiment_name": "e1_cbam_all",
-  "model_name": "configs/yolo_arch/yolov8n_cbam.yaml",
-  "output_dir": "/workspace/psab/runs/yolo_ablation/e1_cbam_all",
-  "prepared_dataset_dir": "/workspace/psab/data/processed/all_levels_all_sources_v1"
-}

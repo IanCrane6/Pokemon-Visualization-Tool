@@ -1,4 +1,0 @@
-2026-04-19 14:44:10,995 | INFO | Using existing prepared dataset: /workspace/psab/data/processed/all_levels_all_sources_v1
-2026-04-19 14:44:10,995 | INFO | Using existing YOLO export: /workspace/psab/data/processed/all_levels_all_sources_v1/yolo
-2026-04-19 14:44:12,784 | INFO | Starting YOLO training: e1_cbam_all  arch=/workspace/psab/configs/yolo_arch/yolov8n_cbam.yaml  load=yolov8n.pt
-2026-04-19 14:49:02,138 | INFO | YOLO training launched successfully. Outputs under /workspace/psab/runs/yolo_ablation/e1_cbam_all

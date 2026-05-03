@@ -1,0 +1,24 @@
+experiment_name: cls_syn_v2_resnet50
+seed: 42
+
+data:
+  manifest_path: data/manifest.csv
+  label_map_path: data/label_to_id.json
+
+model:
+  name: resnet50
+  pretrained: true
+
+train:
+  image_size: 224
+  batch_size: 64
+  num_workers: 8
+  epochs: 15
+  learning_rate: 1.0e-4
+  weight_decay: 1.0e-4
+  device: cuda
+  amp: true
+  selection_metric: accuracy
+
+output:
+  root_dir: runs

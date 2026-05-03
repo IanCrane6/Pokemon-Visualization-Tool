@@ -1,7 +1,0 @@
-{
-  "data_yaml": "/workspace/psab/data/processed/beach_all_v1/yolo/data.yaml",
-  "experiment_name": "e5_full_beach",
-  "model_name": "configs/yolo_arch/yolov8n_cbam_p2.yaml",
-  "output_dir": "/workspace/psab/runs/yolo_ablation/e5_full_beach",
-  "prepared_dataset_dir": "/workspace/psab/data/processed/beach_all_v1"
-}

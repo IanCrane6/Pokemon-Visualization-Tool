@@ -1,7 +1,0 @@
-{
-  "data_yaml": "/workspace/pokemon-snap-benchmark/data/processed/beach_all_v1/yolo/data.yaml",
-  "experiment_name": "yolo_beach_v8n",
-  "model_name": "yolov8n.pt",
-  "output_dir": "/workspace/pokemon-snap-benchmark/runs/yolo/yolo_beach_v8n",
-  "prepared_dataset_dir": "/workspace/pokemon-snap-benchmark/data/processed/beach_all_v1"
-}

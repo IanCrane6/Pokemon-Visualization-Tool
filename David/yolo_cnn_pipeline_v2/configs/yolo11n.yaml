@@ -1,0 +1,8 @@
+experiment_name: yolo11n_v2
+model_pt: yolo11n.pt
+epochs: 50
+imgsz: 640
+batch: 16
+device: 0
+patience: 20
+seed: 42

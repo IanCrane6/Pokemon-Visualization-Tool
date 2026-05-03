@@ -1,0 +1,53 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.pytest_cache/
+
+# Virtual envs
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Large model checkpoints (must NOT be committed; see checkpoints/*/README.md)
+*.pt
+*.pth
+*.ckpt
+*.bin
+*.safetensors
+
+# Large videos (use external link instead)
+*.mp4
+*.avi
+*.mov
+*.mkv
+
+# Large datasets / generated data
+data/
+runs/
+runs_eval/
+yolo_data/
+yolo_data_smoke/
+cross_domain_results/
+*.tar.gz
+*.zip
+
+# Local outputs
+*.log

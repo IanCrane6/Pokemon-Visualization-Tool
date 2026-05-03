@@ -1,9 +1,0 @@
-experiment,dataset,cbam,p2,siou,mAP50,mAP50_95,precision,recall,train_time_sec,note
-e0_baseline_all,all,0,0,0,0.96945,0.96945,0.94474,0.92099,nan,
-e1_cbam_all,all,1,0,0,0.3218,0.32131,0.52042,0.31879,nan,
-e2_p2_all,all,0,1,0,0.27981,0.25248,0.2818,0.3562,nan,pilot (fake-bbox)
-e3_siou_all,all,0,0,1,0.04065,0.02694,0.00377,0.8836,nan,pilot (fake-bbox)
-e4_cbam_p2_all,all,1,1,0,0.44365,0.42929,0.45365,0.39937,nan,pilot (fake-bbox)
-e5_full_all,all,1,1,1,0.01914,0.01509,0.01252,0.24267,nan,pilot (fake-bbox)
-e0_baseline_beach,beach,0,0,0,0.99269,0.99269,0.98347,0.97406,nan,
-e5_full_beach,beach,1,1,1,0.28955,0.27463,0.19767,0.65609,nan,pilot (fake-bbox)

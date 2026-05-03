@@ -1,6 +1,0 @@
-2026-04-19 15:12:56,513 | INFO | Using existing prepared dataset: /workspace/psab/data/processed/beach_all_v1
-2026-04-19 15:12:56,513 | INFO | Using existing YOLO export: /workspace/psab/data/processed/beach_all_v1/yolo
-2026-04-19 15:12:58,333 | INFO | Starting YOLO training: e5_full_beach  arch=/workspace/psab/configs/yolo_arch/yolov8n_cbam_p2.yaml  load=yolov8n.pt
-2026-04-19 15:12:58,513 | INFO | Registering on_train_start callback for V8SIoULoss
-2026-04-19 15:13:04,489 | INFO | V8SIoULoss criterion installed on trainer.model
-2026-04-19 15:14:21,115 | INFO | YOLO training launched successfully. Outputs under /workspace/psab/runs/yolo_ablation/e5_full_beach
