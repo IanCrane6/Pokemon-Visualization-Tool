@@ -46,7 +46,7 @@ def _is_3d(fname: str) -> bool:
     """
     fname = fname.lower()
 
-    if any(kw in fname for kw in ("home", "showdown", "x-y", "omegaruby")):
+    if any(kw in fname for kw in ("home", "showdown", "x-y", "omegaruby", "dream_world")):
         return True
 
     # Gen VII
@@ -72,6 +72,8 @@ def select_data(sources, levels, exclude_3d: bool = False, return_3d: bool = Fal
     """
     if sources == "all":
         sources = ALL_SOURCES
+    elif isinstance(sources, str):
+        sources = [sources]
 
     pokemon_set = load_pokemon_for_levels(levels)
 
@@ -90,10 +92,10 @@ def select_data(sources, levels, exclude_3d: bool = False, return_3d: bool = Fal
                     "source": source,
                 })
 
-    df = pd.DataFrame(rows)
+    df = pd.DataFrame(rows, columns=["image_path", "label", "source"])
 
     # 3D Filtering
-    if exclude_3d or return_3d:
+    if (exclude_3d or return_3d) and not df.empty:
         mask_3d = df["image_path"].apply(lambda p: _is_3d(Path(p).name))
         three_d_df = df[mask_3d].reset_index(drop=True)
         main_df = df[~mask_3d].reset_index(drop=True)
