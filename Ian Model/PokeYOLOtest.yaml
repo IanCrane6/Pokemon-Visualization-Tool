@@ -1,0 +1,20 @@
+path: /content/drive/MyDrive/CS-7643/Pokemon_Snap_test.yolov11
+
+train: train/images
+val:
+test:
+
+nc: 12
+names:
+  - butterfree
+  - chansey
+  - doduo
+  - eevee
+  - kangaskhan
+  - lapras
+  - magikarp
+  - meowth
+  - pidgey
+  - pikachu
+  - scyther
+  - snorlax
